@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="min-h-screen">
+      <div class="bg-background min-h-screen flex flex-col">
+        <div class="w-full">
+          <div
+            class="flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8"
+          >
+            <div class="cursor-pointer">
+              <div class="text-xl font-bold">Logo</div>
+            </div>
+          </div>
+        </div>
+        <main class="flex-1 container mx-auto p-6">
+          <h1 class="text-3xl font-bold mb-6">Posts</h1>
+
+          <!-- post container -->
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <!-- post 1 -->
+            <div
+              class="rounded-sm border-border border bg-card text-card-foreground shadow cursor-pointer hover:shadow-lg transition-all hover:bg-purple-200"
+            >
+              <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="font-semibold leading-none tracking-tight">
+                  Getting Started with Next.js
+                </h3>
+                <p class="text-sm text-muted-foreground">
+                  Learn the basics of Next.js and how to create your first app.
+                </p>
+              </div>
+              <div class="p-6 pt-0">
+                <div class="text-sm text-muted-foreground" id="modal-btn">
+                  Click to read more
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- <div
+        role="region"
+        aria-label="Notifications (F8)"
+        tabindex="-1"
+        style="pointer-events: none"
+      >
+        <ol
+          tabindex="-1"
+          class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"
+        ></ol>
+      </div> -->
+      <!-- Modal -->
+      <div
+        id="modal"
+        class="hidden fixed inset-0 bg-black/50 bg-opacity-50 flex justify-center items-center"
+      >
+        <div class="w-[80vw] sm:w-[25vw] bg-white p-6 rounded-md space-y-4">
+          <h2 class="text-xl font-bold">Post Title</h2>
+          <p>This is the modal content.</p>
+          <button
+            id="close-btn"
+            class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
